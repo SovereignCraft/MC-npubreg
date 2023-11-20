@@ -1,0 +1,7 @@
+name: MC-npubreg
+version: '${project.version}'
+main: com.sovereigncraft.mcnpubreg.MC_npubreg
+api-version: '1.20'
+authors: [Sovtoshi, Cappytech]
+description: A plugin to register player npub addresses to an owned and hosted domain
+website: https://sovereigncraft.com
