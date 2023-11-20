@@ -5,3 +5,6 @@ api-version: '1.20'
 authors: [Sovtoshi, Cappytech]
 description: A plugin to register player npub addresses to an owned and hosted domain
 website: https://sovereigncraft.com
+commands:
+  npubreg:
+    description: registers an npub against Minecarft player name
