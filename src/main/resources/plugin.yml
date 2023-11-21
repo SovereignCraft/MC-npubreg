@@ -11,4 +11,4 @@ commands:
 permissions:
   mcnpubreg.use:
     description: Allows use of the npubreg command
-    default: op
+    default: false
