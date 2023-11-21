@@ -1,6 +1,7 @@
 package com.sovereigncraft.mcnpubreg.Commands;
 
 import com.google.gson.Gson;
+import com.sovereigncraft.mcnpubreg.ConfigHandler;
 import com.google.gson.JsonParseException;
 import com.sovereigncraft.mcnpubreg.HttpUtil;
 import com.sovereigncraft.mcnpubreg.NostrData;
@@ -39,7 +40,7 @@ public class npubregCommand implements CommandExecutor {
         String playerName = player.getName(); // Get the player's name
 
         String npub = args[0];
-        String url = "https://sovereigncraft.com/.well-known/nostr.json";
+        String url = "https://" + ConfigHandler.getDomain() + "/.well-known/nostr.json";
 
         // Check if the player has the required permission
         // Permission node for the command

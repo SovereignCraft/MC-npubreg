@@ -9,6 +9,7 @@ public final class MC_npubreg extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        saveDefaultConfig();
         instance = this;
 
         // Register commands
