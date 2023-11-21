@@ -8,3 +8,7 @@ website: https://sovereigncraft.com
 commands:
   npubreg:
     description: registers an npub against Minecraft player name
+permissions:
+  mcnpubreg.use:
+    description: Allows use of the npubreg command
+    default: op
