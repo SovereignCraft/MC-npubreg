@@ -1,3 +1,4 @@
+// NostrData.java
 package com.sovereigncraft.mcnpubreg;
 
 public class NostrData {

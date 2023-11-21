@@ -1,3 +1,4 @@
+// npubregCommand.java
 package com.sovereigncraft.mcnpubreg.Commands;
 
 import com.google.gson.Gson;

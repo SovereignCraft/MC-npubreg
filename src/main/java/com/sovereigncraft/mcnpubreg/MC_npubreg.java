@@ -1,3 +1,4 @@
+// MC_npubreg.java
 package com.sovereigncraft.mcnpubreg;
 
 import org.bukkit.plugin.java.JavaPlugin;
