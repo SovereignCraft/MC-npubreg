@@ -7,18 +7,26 @@ $jsonFilePath = 'output.json'; // Path to the JSON file you want to write to
 
 // Check for the POST request
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Get raw POST data
+    $rawData = file_get_contents("php://input");
+    $decodedData = json_decode($rawData, true);
 
     // Check for the secret phrase
-    if (isset($_POST['secret']) && $_POST['secret'] === $secretPhrase) {
-        
-        // Check for the data parameter and write to JSON file
-        if (isset($_POST['data'])) {
-            $data = $_POST['data'];
+    if (isset($decodedData['secret']) && $decodedData['secret'] === $secretPhrase) {
 
-            if (file_put_contents($jsonFilePath, json_encode($data))) {
-                echo json_encode(['success' => true, 'message' => 'Data written successfully!']);
+        // Check for the data parameter and write to JSON file
+        if (isset($decodedData['data'])) {
+            $data = $decodedData['data'];
+
+            // Validate data as JSON
+            if (json_last_error() === JSON_ERROR_NONE) {
+                if (file_put_contents($jsonFilePath, json_encode($data))) {
+                    echo json_encode(['success' => true, 'message' => 'Data written successfully!']);
+                } else {
+                    echo json_encode(['success' => false, 'message' => 'Failed to write data to JSON file.']);
+                }
             } else {
-                echo json_encode(['success' => false, 'message' => 'Failed to write data to JSON file.']);
+                echo json_encode(['success' => false, 'message' => 'Invalid JSON data.']);
             }
         } else {
             echo json_encode(['success' => false, 'message' => 'Data parameter missing.']);
