@@ -2,9 +2,9 @@ name: MC-npubreg
 version: '${project.version}'
 main: com.sovereigncraft.mcnpubreg.MC_npubreg
 api-version: '1.20'
-authors: [Sovtoshi, Cappytech]
+authors: [Sovtoshi, CappyTech]
 description: A plugin to register player npub addresses to an owned and hosted domain
 website: https://sovereigncraft.com
 commands:
   npubreg:
-    description: registers an npub against Minecarft player name
+    description: registers an npub against Minecraft player name
