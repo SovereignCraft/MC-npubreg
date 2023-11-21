@@ -1,20 +1,24 @@
-// NostrData.java
 package com.sovereigncraft.mcnpubreg;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class NostrData {
-    private String npub;
+    private Map<String, String> names;
 
-    // Constructor, getters, and setters
-    public NostrData(String npub) {
-        this.npub = npub;
+    public NostrData() {
+        this.names = new HashMap<>();
     }
 
-    public String getNpub() {
-        return npub;
+    public Map<String, String> getNames() {
+        return names;
     }
 
-    public void setNpub(String npub) {
-        this.npub = npub;
+    public void setNames(Map<String, String> names) {
+        this.names = names;
+    }
+
+    public void addName(String name, String npub) {
+        this.names.put(name, npub);
     }
 }
-
