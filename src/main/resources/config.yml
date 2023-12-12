@@ -1,1 +1,4 @@
+#domain that you own and will place PHP file within
 domain: yourdomain.gg
+#a secret that will be checked when the post goes to the php file
+secret: ChangeMe!
