@@ -7,4 +7,5 @@ public class ConfigHandler {
         return MC_npubreg.getInstance().getConfig();
     }
     public static String getDomain() { return getConfig().getString("domain"); }
+    public static String getSecret() { return getConfig().getString("secret"); }
 }
